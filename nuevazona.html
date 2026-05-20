@@ -1,69 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Living Galerie</title>
-<link rel="stylesheet" href="style.css">
- <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Living Galerie - Buscar en Otra Zona</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="escena">
-      <div class="reloj">
-
-        <div class="contador" id="contador">60</div>
-
-        <div class="label">SEG</div>
-      </div>
-      <div class="barra-container">
-
-        <div class="relleno" id="relleno"></div>
-      </div>
+ 
+  <div class="escena">
+    <div class="reloj">
+      <div class="contador" id="contador">60</div>
+      <div class="label">SEG</div>
     </div>
-
-    <script src="script.js"></script>
-
-<div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
-  <span class="timer-kicker">Tiempo</span>
-  <span id="timer-count">02:00</span>
-</div>
-<!-- ═══════════════════════════════════════════════════ -->
-<!--  BUSCAR EN OTRA ZONA                               -->
-<!-- ═══════════════════════════════════════════════════ -->
-<div id="buscar-otra-zona" class="screen story-screen">
-  <div class="screen-top-bar"></div>
-  <div class="screen-label">Buscar en Otra Zona</div>
-  <div class="screen-title">Buscar en otra zona</div>
-  <div class="timer-bar"></div>
-  <div class="timer-label">Temporizador</div>
-  <div class="screen-body">
-    <div class="story-text">
-      <p>Decides no quedarte. Algo en el ambiente te dice que permanecer demasiado tiempo en un solo lugar es exactamente lo que alguien aquí quiere.</p>
-      <p>Te mueves despacio. Como si fueras un visitante más. La galería es más grande de lo que parece desde afuera. Los pasillos se doblan sin aviso. Las obras te observan desde los marcos, ninguna tiene ficha técnica, ninguna tiene nombre.</p>
-      <p>Solo están ahí, colgadas con una precisión que incomoda.</p>
-      <p>Escuchas pasos en algún lugar detrás de ti.</p>
-      <p>No te volteas.</p>
-      <p>Sigues caminando. Tienes tres zonas pendientes y el tiempo no espera.</p>
-    </div>
-    <div class="story-img">
-      <img src="images/BUSCAR EN OTRA ZONA JPG.png" alt="Pasillo sin fichas" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
-    </div>
-    <div class="right-panel">
-      <div>
-        <div class="panel-label">Pistas</div>
-        <div class="panel-box"><div class="panel-count">0</div></div>
-      </div>
-      <div>
-        <div class="panel-label">Premios</div>
-        <div class="panel-box"><div class="panel-count">0</div></div>
-      </div>
+    <div class="barra-container">
+      <div class="relleno" id="relleno"></div>
     </div>
   </div>
-  <div class="choices">
-    <a class="btn" href="camaradeseguridad.html">Cámara de seguridad</a>
-    <a class="btn" href="archivoovulto.html">Archivo oculto</a>
+ 
+  <div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
+    <span class="timer-kicker">Tiempo</span>
+    <span id="timer-count">01:00</span>
   </div>
-</div>
+ 
+  <div class="story-progress">
+    <div class="story-progress-fill" id="story-progress-fill"></div>
+  </div>
+  <div id="buscar-otra-zona" class="screen story-screen">
+    <div class="screen-top-bar"></div>
+    <div class="screen-label">Buscar en Otra Zona</div>
+    <div class="screen-title">Buscar en otra zona</div>
+    <div class="timer-bar"></div>
+    <div class="timer-label">Temporizador</div>
+    
+    <div class="screen-body">
+      <div class="story-text">
+        <p>Decides no quedarte. Algo en el ambiente te dice que permanecer demasiado tiempo en un solo lugar es exactamente lo que alguien aquí quiere.</p>
+        <p>Te mueves despacio. Como si fueras un visitante más. La galería es más grande de lo que parece desde afuera. Los pasillos se doblan sin aviso. Las obras te observan desde los marcos, ninguna tiene ficha técnica, ninguna tiene nombre.</p>
+        <p>Solo están ahí, colgadas con una precisión que incomoda.</p>
+        <p>Escuchas pasos en algún lugar detrás de ti.</p>
+        <p>No te volteas.</p>
+        <p>Sigues caminando. Tienes tres zonas pendientes y el tiempo no espera.</p>
+      </div>
+      
+      <div class="story-img">
+        <img src="images/BUSCAR EN OTRA ZONA JPG.png" alt="Pasillo sin fichas" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+      </div>
+      
+      <div class="right-panel">
+        <div>
+          <div class="panel-label">Pistas</div>
+          <div class="panel-box"><div class="panel-count">0</div></div>
+        </div>
+        <div>
+          <div class="panel-label">Premios</div>
+          <div class="panel-box"><div class="panel-count">0</div></div>
+        </div>
+      </div>
+    </div><div class="choices">
+      <a class="btn" href="camaradeseguridad.html">Cámara de seguridad</a>
+      <a class="btn" href="archivoovulto.html">Archivo oculto</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-</html>.
+</html>

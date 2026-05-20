@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Living Galerie</title>
-<link rel="stylesheet" href="style.css">
- <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Living Galerie - Lista de Compradores</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="escena">
-      <div class="reloj">
-
-        <div class="contador" id="contador">60</div>
-
-        <div class="label">SEG</div>
-      </div>
-      <div class="barra-container">
-
-        <div class="relleno" id="relleno"></div>
-      </div>
+ 
+  <div class="escena">
+    <div class="reloj">
+      <div class="contador" id="contador">60</div>
+      <div class="label">SEG</div>
     </div>
-
-    <script src="script.js"></script>
-
-<div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
-  <span class="timer-kicker">Tiempo</span>
-  <span id="timer-count">02:00</span>
-</div>
-<!-- ═══════════════════════════════════════════════════ -->
-<!--  LISTA DE COMPRADORES SOSPECHOSOS                  -->
-<!-- ═══════════════════════════════════════════════════ -->
-<div id="lista-compradores" class="screen story-screen">
-  <div class="screen-top-bar"></div>
-  <div class="screen-label">Lista de Compradores Sospechosos</div>
-  <div class="screen-title">Lista de compradores sospechosos</div>
-  <div class="timer-bar"></div>
-  <div class="timer-label">Temporizador</div>
-  <div class="screen-body">
-    <div class="story-text">
-      <p>Documento sin membrete. Impresión casera. Sin fecha.</p>
-      <p>No es una lista de invitados. Es algo más cuidadoso que eso.</p>
-      <p>Doce nombres. Al lado de cada uno: una ciudad, una cantidad sin signo de moneda, y un código de tres letras que no corresponde a ningún sistema de clasificación conocido.</p>
-      <p>Tres nombres tienen una estrella dibujada a mano. Uno está tachado. <strong>El nombre tachado es J. Rodríguez.</strong></p>
-      <p>No por sospecha. Por algo peor: <em>"resuelto"</em>, dice al lado, con letra que ya reconoces. La misma firma que aparece en los contratos del archivo oculto. La misma firma que cambia levemente cada vez.</p>
-      <p><strong>Madame Pauliña no vendía arte. Administraba silencio.</strong></p>
-    </div>
-    <div class="story-img">
-      <img src="images/LISTA COMPRADORES JPG.png" alt="Pasillo sin fichas" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
-    </div>
-    <div class="right-panel">
-      <div>
-        <div class="panel-label">Pistas</div>
-        <div class="panel-box"><div class="panel-count">3</div></div>
-      </div>
-      <div>
-        <div class="panel-label">Premios</div>
-        <div class="panel-box"><div class="panel-count">0</div></div>
-      </div>
+    <div class="barra-container">
+      <div class="relleno" id="relleno"></div>
     </div>
   </div>
-  <div class="choices">
-    <a class="btn" href="confrontarajaime.html">Confrontar a Jaime</a>
-    <a class="btn" href="nuevazona.html">Buscar en otra zona</a>
-    <a class="btn" href="encargadodelagaleria.html">Ir con el encargado de la galería</a>
+ 
+  <div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
+    <span class="timer-kicker">Tiempo</span>
+    <span id="timer-count">01:00</span>
   </div>
-</div>  
+ 
+  <div class="story-progress">
+    <div class="story-progress-fill" id="story-progress-fill"></div>
+  </div>
+  <div id="lista-compradores" class="screen story-screen">
+    <div class="screen-top-bar"></div>
+    <div class="screen-label">Lista de Compradores Sospechosos</div>
+    <div class="screen-title">Lista de compradores sospechosos</div>
+    <div class="timer-bar"></div>
+    <div class="timer-label">Temporizador</div>
+    
+    <div class="screen-body">
+      <div class="story-text">
+        <p>Documento sin membrete. Impresión casera. Sin fecha.</p>
+        <p>No es una lista de invitados. Es algo más cuidadoso que eso.</p>
+        <p>Doce nombres. Al lado de cada uno: una ciudad, una cantidad sin signo de moneda, y un código de tres letras que no corresponde a ningún sistema de clasificación conocido.</p>
+        <p>Tres nombres tienen una estrella dibujada a mano. Uno está tachado. <strong>El nombre tachado es J. Rodríguez.</strong></p>
+        <p>No por sospecha. Por algo peor: <em>"resuelto"</em>, dice al lado, con letra que ya reconoces. La misma firma que aparece en los contratos del archivo oculto. La misma firma que cambia levemente cada vez.</p>
+        <p><strong>Madame Pauliña no vendía arte. Administraba silencio.</strong></p>
+      </div>
+      
+      <div class="story-img">
+        <img src="images/LISTA COMPRADORES JPG.png" alt="Pasillo sin fichas" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+      </div>
+      
+      <div class="right-panel">
+        <div>
+          <div class="panel-label">Pistas</div>
+          <div class="panel-box"><div class="panel-count">3</div></div>
+        </div>
+        <div>
+          <div class="panel-label">Premios</div>
+          <div class="panel-box"><div class="panel-count">0</div></div>
+        </div>
+      </div>
+    </div><div class="choices">
+      <a class="btn" href="confrontarajaime.html">Confrontar a Jaime</a>
+      <a class="btn" href="nuevazona.html">Buscar en otra zona</a>
+      <a class="btn" href="encargadodelagaleria.html">Ir con el encargado de la galería</a>
+    </div>
+  </div>  
+
+  <script src="script.js"></script>
 </body>
-</html>.
+</html>

@@ -1,70 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Living Galerie</title>
-<link rel="stylesheet" href="style.css">
- <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Living Galerie - Catálogo de Subasta</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="escena">
-      <div class="reloj">
-
-        <div class="contador" id="contador">60</div>
-
-        <div class="label">SEG</div>
-      </div>
-      <div class="barra-container">
-
-        <div class="relleno" id="relleno"></div>
-      </div>
+ 
+  <div class="escena">
+    <div class="reloj">
+      <div class="contador" id="contador">60</div>
+      <div class="label">SEG</div>
     </div>
-
-    <script src="script.js"></script>
-
-<div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
-  <span class="timer-kicker">Tiempo</span>
-  <span id="timer-count">02:00</span>
-</div>
-
-<!-- ═══════════════════════════════════════════════════ -->
-<!--  CATÁLOGO DE SUBASTA MARCADO                       -->
-<!-- ═══════════════════════════════════════════════════ -->
-<div id="catalogo" class="screen story-screen">
-  <div class="screen-top-bar"></div>
-  <div class="screen-label">Evidencia Clave</div>
-  <div class="screen-title">Catálogo de subasta marcado</div>
-  <div class="timer-bar"></div>
-  <div class="timer-label">Temporizador</div>
-  <div class="screen-body">
-    <div class="story-text">
-      <p>Colección Privada — Edición Restringida. Sin distribución pública.</p>
-      <p>Papel grueso, bordes dorados. Parece legítimo hasta que lo miras de cerca. Algunas páginas tienen marcas al margen con lápiz rojo: una X discreta al lado de ciertas obras, una fecha, y a veces solo una inicial. <strong>"V."</strong></p>
-      <p>Las obras marcadas no coinciden con ningún registro de colección conocida. Pero sí coinciden con algo que has visto antes: la lista de robos sin resolver de los últimos doce años.</p>
-      <p>Alguien usó este catálogo para planificar. O para confirmar que todo salió bien. En la última página, escrito a mano, casi borrado:</p>
-      <p><strong>"Lote 7 — pendiente. Pauliña confirma entrega."</strong></p>
-    </div>
-    <div class="story-img">
-      <img src="images/cátalogo de subasta JGP.png" alt="Catálogo marcado" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
-    </div>
-    <div class="right-panel">
-      <div>
-        <div class="panel-label">Pistas</div>
-        <div class="panel-box"><div class="panel-count">2</div></div>
-      </div>
-      <div>
-        <div class="panel-label">Premios</div>
-        <div class="panel-box"><div class="panel-count">0</div></div>
-      </div>
+    <div class="barra-container">
+      <div class="relleno" id="relleno"></div>
     </div>
   </div>
-  <div class="choices">
-    <a class="btn" href="camaradeseguridad.html">Cámara</a>
-    <a class="btn" href="compradoressospechosos.html">Lista de compradores sospechosos</a>
-    <a class="btn" href="archivoovulto.html">Archivo oculto</a>
+ 
+  <div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
+    <span class="timer-kicker">Tiempo</span>
+    <span id="timer-count">01:00</span>
   </div>
-</div>
+ 
+  <div class="story-progress">
+    <div class="story-progress-fill" id="story-progress-fill"></div>
+  </div>
+  <div id="catalogo" class="screen story-screen">
+    <div class="screen-top-bar"></div>
+    <div class="screen-label">Evidencia Clave</div>
+    <div class="screen-title">Catálogo de subasta marcado</div>
+    <div class="timer-bar"></div>
+    <div class="timer-label">Temporizador</div>
+    
+    <div class="screen-body">
+      <div class="story-text">
+        <p>Colección Privada — Edición Restringida. Sin distribución pública.</p>
+        <p>Papel grueso, bordes dorados. Parece legítimo hasta que lo miras de cerca. Algunas páginas tienen marcas al margen con lápiz rojo: una X discreta al lado de ciertas obras, una fecha, y a veces solo una inicial. <strong>"V."</strong></p>
+        <p>Las obras marcadas no coinciden con ningún registro de colección conocida. Pero sí coinciden con algo que has visto antes: la lista de robos sin resolver de los últimos doce años.</p>
+        <p>Alguien usó este catálogo para planificar. O para confirmar que todo salió bien. En la última página, escrito a mano, casi borrado:</p>
+        <p><strong>"Lote 7 — pendiente. Pauliña confirma entrega."</strong></p>
+      </div>
+      
+      <div class="story-img">
+        <img src="images/cátalogo de subasta JGP.png" alt="Catálogo marcado" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+      </div>
+      
+      <div class="right-panel">
+        <div>
+          <div class="panel-label">Pistas</div>
+          <div class="panel-box"><div class="panel-count">2</div></div>
+        </div>
+        <div>
+          <div class="panel-label">Premios</div>
+          <div class="panel-box"><div class="panel-count">0</div></div>
+        </div>
+      </div>
+    </div><div class="choices">
+      <a class="btn" href="camaradeseguridad.html">Cámara</a>
+      <a class="btn" href="compradoressospechosos.html">Lista de compradores sospechosos</a>
+      <a class="btn" href="archivoovulto.html">Archivo oculto</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-</html>.
+</html>

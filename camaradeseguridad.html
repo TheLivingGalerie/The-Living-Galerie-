@@ -1,68 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Living Galerie</title>
-<link rel="stylesheet" href="style.css">
- <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Living Galerie - Cámara de Seguridad</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="escena">
-      <div class="reloj">
-
-        <div class="contador" id="contador">60</div>
-
-        <div class="label">SEG</div>
-      </div>
-      <div class="barra-container">
-
-        <div class="relleno" id="relleno"></div>
-      </div>
+ 
+  <div class="escena">
+    <div class="reloj">
+      <div class="contador" id="contador">60</div>
+      <div class="label">SEG</div>
     </div>
-
-    <script src="script.js"></script>
-
-<div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
-  <span class="timer-kicker">Tiempo</span>
-  <span id="timer-count">02:00</span>
-</div>
-<!-- ═══════════════════════════════════════════════════ -->
-<!--  CÁMARA DE SEGURIDAD                               -->
-<!-- ═══════════════════════════════════════════════════ -->
-<div id="camara" class="screen story-screen">
-  <div class="screen-top-bar"></div>
-  <div class="screen-label">Sala de Seguridad</div>
-  <div class="screen-title">Cámara de seguridad con grabación incompleta</div>
-  <div class="timer-bar"></div>
-  <div class="timer-label">Temporizador</div>
-  <div class="screen-body">
-    <div class="story-text">
-      <p>Archivo de video · Duración original: 4h 52min. Duración actual: 55min.</p>
-      <p>No fue borrado. Eso es lo primero que notas. Fue saltado. Como si alguien hubiera querido que quedara rastro, pero no demasiado.</p>
-      <p>En el fragmento que sobrevive, se ve el pasillo lateral de la galería. Hora: 2:47 a.m. Una figura cruza. Alta. Caminado seguro. Zapatos de cuero —el sonido es inconfundible incluso en el audio de baja calidad.</p>
-      <p>Cuatro segundos después, la grabación salta. Cuando retoma, el pasillo está vacío y una de las obras ya no está en su lugar.</p>
-      <p>El nombre en el sistema que autorizó el acceso esa noche: Jaime Rodríguez. Permiso de nivel administrador. Firmado por Madame Pauliña.</p>
-    </div>
-    <div class="story-img">
-      <img src="images/CÁMARA VIGILANCIA JGP.jpeg" alt="Cámara y corredor nocturno" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
-    </div>
-    <div class="right-panel">
-      <div>
-        <div class="panel-label">Pistas</div>
-        <div class="panel-box"><div class="panel-count">1</div></div>
-      </div>
-      <div>
-        <div class="panel-label">Premios</div>
-        <div class="panel-box"><div class="panel-count">0</div></div>
-      </div>
+    <div class="barra-container">
+      <div class="relleno" id="relleno"></div>
     </div>
   </div>
-  <div class="choices">
-    <a class="btn" href="pinturaquecambia.html">Pintura que cambia con la luz</a>
-    <a class="btn" href="archivoovulto.html">Investigar el archivo oculto</a>
+ 
+  <div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
+    <span class="timer-kicker">Tiempo</span>
+    <span id="timer-count">01:00</span>
   </div>
-</div>
+ 
+  <div class="story-progress">
+    <div class="story-progress-fill" id="story-progress-fill"></div>
+  </div>
+  <div id="camara" class="screen story-screen">
+    <div class="screen-top-bar"></div>
+    <div class="screen-label">Sala de Seguridad</div>
+    <div class="screen-title">Cámara de seguridad con grabación incompleta</div>
+    <div class="timer-bar"></div>
+    <div class="timer-label">Temporizador</div>
+    
+    <div class="screen-body">
+      <div class="story-text">
+        <p>Archivo de video · Duración original: 4h 52min. Duración actual: 55min.</p>
+        <p>No fue borrado. Eso es lo primero que notas. Fue saltado. Como si alguien hubiera querido que quedara rastro, pero no demasiado.</p>
+        <p>En el fragmento que sobrevive, se ve el pasillo lateral de la galería. Hora: 2:47 a.m. Una figura cruza. Alta. Caminado seguro. Zapatos de cuero —el sonido es inconfundible incluso en el audio de baja calidad.</p>
+        <p>Cuatro segundos después, la grabación salta. Cuando retoma, el pasillo está vacío y una de las obras ya no está en su lugar.</p>
+        <p>El nombre en el sistema que autorizó el acceso esa noche: Jaime Rodríguez. Permiso de nivel administrador. Firmado por Madame Pauliña.</p>
+      </div>
+      
+      <div class="story-img">
+        <img src="images/CÁMARA VIGILANCIA JGP.jpeg" alt="Cámara y corredor nocturno" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+      </div>
+      
+      <div class="right-panel">
+        <div>
+          <div class="panel-label">Pistas</div>
+          <div class="panel-box"><div class="panel-count">1</div></div>
+        </div>
+        <div>
+          <div class="panel-label">Premios</div>
+          <div class="panel-box"><div class="panel-count">0</div></div>
+        </div>
+      </div>
+    </div><div class="choices">
+      <a class="btn" href="pinturaquecambia.html">Pintura que cambia con la luz</a>
+      <a class="btn" href="archivoovulto.html">Investigar el archivo oculto</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-</html>.
+</html>

@@ -1,5 +1,5 @@
 /* =========================================================
-   THE LIVING GALERIE - 
+   THE LIVING GALERIE
    ========================================================= */
 
 * {
@@ -9,25 +9,23 @@
 }
 
 :root {
-  --bg: #130f14;
+  --ink: #221713;
   --paper: #efe7d5;
-  --paper-dark: #d7c3a4;
-  --ink: #1f1714;
-  --muted: #6f5b4d;
+  --paper-dark: #ddd0b3;
+  --muted: #7a6a55;
   --gold: #c99b43;
   --red: #8d2424;
   --green: #233f34;
-  --shadow: rgba(0, 0, 0, 0.42);    
+  --shadow: rgba(0, 0, 0, 0.42);
 }
 
 html {
-  scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 body {
-     padding-top:120px;
-
+  padding-top: 120px;
   min-height: 100vh;
   font-family: Georgia, "Times New Roman", serif;
   background:
@@ -36,7 +34,10 @@ body {
   color: var(--ink);
 }
 
-/* Temporizador fijo: aparece solo en páginas de historia gracias a JavaScript. */
+/* =========================================================
+   TEMPORIZADOR FIJO
+   ========================================================= */
+
 .timer-widget {
   position: fixed;
   left: 18px;
@@ -59,6 +60,16 @@ body {
   display: none;
 }
 
+.timer-widget.is-ending {
+  border-color: #ff6b55;
+  animation: pulse 0.8s infinite alternate;
+}
+
+@keyframes pulse {
+  from { box-shadow: 0 0 0 rgba(255, 107, 85, 0.2); }
+  to   { box-shadow: 0 0 24px rgba(255, 107, 85, 0.8); }
+}
+
 .timer-kicker {
   display: block;
   font-family: Arial, Helvetica, sans-serif;
@@ -76,17 +87,39 @@ body {
   font-weight: 800;
 }
 
-.timer-widget.is-ending {
-  border-color: #ff6b55;
-  animation: pulse 0.8s infinite alternate;
+/* =========================================================
+   BARRA DE PROGRESO NARRATIVA
+   ========================================================= */
+
+.story-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.28);
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
 }
 
-@keyframes pulse {
-  from { box-shadow: 0 0 0 rgba(255, 107, 85, 0.2); }
-  to { box-shadow: 0 0 24px rgba(255, 107, 85, 0.8); }
+.story-progress-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #efe7d5 0%,
+    #c99b43 20%,
+    #8d2424 45%,
+    #5e0f0f 100%
+  );
+  transition: width 1s linear;
 }
 
-/* Cada bloque funciona como una página completa de la historia. */
+/* =========================================================
+   CADA BLOQUE FUNCIONA COMO UNA PÁGINA
+   ========================================================= */
+
 .screen {
   min-height: 100vh;
   scroll-snap-align: start;
@@ -95,7 +128,11 @@ body {
   border-bottom: 1px solid rgba(201, 155, 67, 0.35);
   background:
     linear-gradient(rgba(239, 231, 213, 0.92), rgba(239, 231, 213, 0.92)),
-    repeating-linear-gradient(90deg, transparent 0 22px, rgba(72, 42, 29, 0.08) 22px 24px);
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 22px,
+      rgba(72, 42, 29, 0.08) 22px 24px
+    );
 }
 
 .screen:target {
@@ -112,6 +149,7 @@ body {
 }
 
 /* ===================== PORTADA ===================== */
+
 #home {
   justify-content: center;
   background:
@@ -156,12 +194,13 @@ body {
   text-align: right;
 }
 
-/* ===================== ESTRUCTURA DE PÁGINA ===================== */
+/* ===================== ESTRUCTURA ===================== */
+
 .screen-label {
   padding: 20px 48px 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.74rem;
-  letter-spacing: 0.20em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -177,12 +216,20 @@ body {
   border-bottom: 1px solid rgba(80, 52, 35, 0.35);
 }
 
-/* Estas barras dejan claro al principiante dónde va el tiempo, pero el reloj real está a la izquierda. */
+/* =========================================================
+   BARRA TEMPORAL DECORATIVA
+   ========================================================= */
+
 .timer-bar {
   height: 8px;
   margin: 16px 48px 0;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--red), var(--gold), rgba(255, 255, 255, 0.35));
+  background: linear-gradient(
+    90deg,
+    var(--red),
+    var(--gold),
+    rgba(255, 255, 255, 0.35)
+  );
 }
 
 .timer-label {
@@ -195,12 +242,19 @@ body {
   color: var(--muted);
 }
 
+/* =========================================================
+   CUERPO DE ESCENA
+   ========================================================= */
+
 .screen-body {
   width: min(1220px, 100%);
   margin: 0 auto;
   padding: 30px 48px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 330px) 170px;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(220px, 330px)
+    170px;
   gap: 28px;
   align-items: start;
   flex: 1;
@@ -221,18 +275,16 @@ body {
   color: #221713;
 }
 
-.story-text strong,
-.story-text em {
-  color: var(--red);
-}
+/* =========================================================
+   IMÁGENES / ESPACIOS VISUALES
+   ========================================================= */
 
-/* ===================== IMÁGENES / ESPACIOS VISUALES ===================== */
 .img-placeholder {
   width: 100%;
   min-height: 245px;
   padding: 18px;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
   border: 3px solid #2f251c;
   border-radius: 18px;
@@ -255,36 +307,49 @@ body {
     linear-gradient(135deg, #171014, #4c2d27 45%, #13271f);
 }
 
-.scene-home { min-height: 320px; background-image: linear-gradient(to top, rgba(0,0,0,.75), transparent 55%), radial-gradient(circle at 50% 18%, #f3c46a, transparent 4rem), linear-gradient(90deg, #08070a 0 28%, #5b2a25 28% 32%, #14110f 32% 68%, #5b2a25 68% 72%, #08070a 72%); }
-.scene-entrance { background-image: linear-gradient(to top, rgba(0,0,0,.78), transparent 55%), radial-gradient(circle at 45% 14%, #e6ba5f, transparent 3rem), linear-gradient(90deg, #1c1717 0 18%, #0b0b0d 18% 70%, #35241f 70%); }
-.scene-office { background-image: linear-gradient(to top, rgba(0,0,0,.8), transparent 58%), radial-gradient(circle at 70% 20%, #eac77c, transparent 4rem), linear-gradient(135deg, #1b1412, #61402d 45%, #17110f); }
-.scene-envelope { background-image: linear-gradient(to top, rgba(0,0,0,.72), transparent 60%), radial-gradient(circle at 52% 48%, #e9d3a2 0 18%, transparent 19%), linear-gradient(135deg, #36261f, #8d2424, #15100f); }
-.scene-camera { background-image: linear-gradient(to top, rgba(0,0,0,.82), transparent 60%), repeating-linear-gradient(90deg, rgba(255,255,255,.14) 0 2px, transparent 2px 38px), linear-gradient(135deg, #14161a, #283c45, #111); }
-.scene-hall { background-image: linear-gradient(to top, rgba(0,0,0,.8), transparent 60%), linear-gradient(90deg, #151010 0 16%, #9c8a66 16% 18%, #261c18 18% 48%, #9c8a66 48% 50%, #1b1514 50% 82%, #9c8a66 82% 84%, #151010 84%); }
-.scene-archive { background-image: linear-gradient(to top, rgba(0,0,0,.76), transparent 57%), repeating-linear-gradient(0deg, rgba(235,214,167,.35) 0 10px, rgba(70,48,37,.25) 10px 16px), linear-gradient(135deg, #241b17, #725134, #13100f); }
-.scene-painting { background-image: linear-gradient(to top, rgba(0,0,0,.76), transparent 55%), radial-gradient(circle at 50% 42%, rgba(255,255,255,.42), transparent 5rem), linear-gradient(135deg, #1b1516, #8d2424 42%, #233f34); }
-.scene-catalog { background-image: linear-gradient(to top, rgba(0,0,0,.76), transparent 55%), repeating-linear-gradient(0deg, rgba(255,247,220,.45) 0 12px, transparent 12px 24px), linear-gradient(135deg, #161211, #88653e, #25130f); }
-.scene-security { background-image: linear-gradient(to top, rgba(0,0,0,.82), transparent 60%), radial-gradient(circle at 70% 25%, rgba(95,170,160,.35), transparent 5rem), linear-gradient(90deg, #101418, #20323a, #090b0d); }
-.scene-jaime { background-image: linear-gradient(to top, rgba(0,0,0,.82), transparent 60%), radial-gradient(circle at 50% 30%, #d1ae63, transparent 5rem), linear-gradient(135deg, #151111, #4f2a24, #101712); }
+.scene-home      { min-height: 320px; background-image: linear-gradient(to top, rgba(0,0,0,.75), transparent 55%), radial-gradient(circle at 50% 18%, #f3c46a, transparent 4rem), linear-gradient(90deg, #08070a 0 28%, #5b2a25 28% 32%, #14110f 32% 68%, #5b2a25 68% 72%, #08070a 72%); }
+.scene-entrance  { background-image: linear-gradient(to top, rgba(0,0,0,.78), transparent 55%), radial-gradient(circle at 45% 14%, #e6ba5f, transparent 3rem), linear-gradient(90deg, #1c1717 0 18%, #0b0b0d 18% 70%, #35241f 70%); }
+.scene-office    { background-image: linear-gradient(to top, rgba(0,0,0,.8), transparent 58%), radial-gradient(circle at 70% 20%, #eac77c, transparent 4rem), linear-gradient(135deg, #1b1412, #61402d 45%, #17110f); }
+.scene-envelope  { background-image: linear-gradient(to top, rgba(0,0,0,.72), transparent 60%), radial-gradient(circle at 52% 48%, #e9d3a2 0 18%, transparent 19%), linear-gradient(135deg, #36261f, #8d2424, #15100f); }
+.scene-camera    { background-image: linear-gradient(to top, rgba(0,0,0,.82), transparent 60%), repeating-linear-gradient(90deg, rgba(255,255,255,.14) 0 2px, transparent 2px 38px), linear-gradient(135deg, #14161a, #283c45, #111); }
+.scene-hall      { background-image: linear-gradient(to top, rgba(0,0,0,.8), transparent 60%), linear-gradient(90deg, #151010 0 16%, #9c8a66 16% 18%, #261c18 18% 48%, #9c8a66 48% 50%, #1b1514 50% 82%, #9c8a66 82% 84%, #151010 84%); }
+.scene-archive   { background-image: linear-gradient(to top, rgba(0,0,0,.76), transparent 57%), repeating-linear-gradient(0deg, rgba(235,214,167,.35) 0 10px, rgba(70,48,37,.25) 10px 16px), linear-gradient(135deg, #241b17, #725134, #13100f); }
+.scene-painting  { background-image: linear-gradient(to top, rgba(0,0,0,.76), transparent 55%), radial-gradient(circle at 50% 42%, rgba(255,255,255,.42), transparent 5rem), linear-gradient(135deg, #1b1516, #8d2424 42%, #233f34); }
+.scene-catalog   { background-image: linear-gradient(to top, rgba(0,0,0,.76), transparent 55%), repeating-linear-gradient(0deg, rgba(255,247,220,.45) 0 12px, transparent 12px 24px), linear-gradient(135deg, #161211, #88653e, #25130f); }
+.scene-security  { background-image: linear-gradient(to top, rgba(0,0,0,.82), transparent 60%), radial-gradient(circle at 70% 25%, rgba(95,170,160,.35), transparent 5rem), linear-gradient(90deg, #101418, #20323a, #090b0d); }
+.scene-jaime     { background-image: linear-gradient(to top, rgba(0,0,0,.82), transparent 60%), radial-gradient(circle at 50% 30%, #d1ae63, transparent 5rem), linear-gradient(135deg, #151111, #4f2a24, #101712); }
 .scene-marchetti { background-image: linear-gradient(to top, rgba(0,0,0,.83), transparent 58%), radial-gradient(circle at 38% 26%, #d7c3a4, transparent 4rem), linear-gradient(135deg, #171617, #333840, #150f0f); }
-.scene-time { background-image: linear-gradient(to top, rgba(0,0,0,.83), transparent 58%), radial-gradient(circle at center, transparent 0 22%, #c99b43 23% 25%, transparent 26%), linear-gradient(135deg, #09090a, #3d241f, #0c1110); }
-.scene-shadows { background-image: linear-gradient(to top, rgba(0,0,0,.88), transparent 55%), linear-gradient(135deg, #050505, #21151a 48%, #0c0c0c); }
-.scene-error { background-image: linear-gradient(to top, rgba(0,0,0,.82), transparent 55%), repeating-linear-gradient(45deg, rgba(141,36,36,.45) 0 12px, transparent 12px 26px), linear-gradient(135deg, #120c0d, #33272d, #080707); }
-.scene-justice { background-image: linear-gradient(to top, rgba(0,0,0,.74), transparent 55%), radial-gradient(circle at 50% 15%, #f0c66f, transparent 5rem), linear-gradient(135deg, #101812, #345140, #111); }
+.scene-time      { background-image: linear-gradient(to top, rgba(0,0,0,.83), transparent 58%), radial-gradient(circle at center, transparent 0 22%, #c99b43 23% 25%, transparent 26%), linear-gradient(135deg, #09090a, #3d241f, #0c1110); }
+.scene-shadows   { background-image: linear-gradient(to top, rgba(0,0,0,.88), transparent 55%), linear-gradient(135deg, #050505, #21151a 48%, #0c0c0c); }
+.scene-error     { background-image: linear-gradient(to top, rgba(0,0,0,.82), transparent 55%), repeating-linear-gradient(45deg, rgba(141,36,36,.45) 0 12px, transparent 12px 26px), linear-gradient(135deg, #120c0d, #33272d, #080707); }
+.scene-justice   { background-image: linear-gradient(to top, rgba(0,0,0,.74), transparent 55%), radial-gradient(circle at 50% 15%, #f0c66f, transparent 5rem), linear-gradient(135deg, #101812, #345140, #111); }
 
 .home-img {
   max-width: 380px;
 }
 
+/* =========================================================
+   IMÁGENES
+   ========================================================= */
+
 .story-img {
   width: 100%;
+  grid-column: 2;
 }
 
-/* Panel derecho: solo dos cuadrados, Premios y Pistas. */
+/* =========================================================
+   PANEL DERECHO
+   ========================================================= */
+
 .right-panel {
   display: grid;
   gap: 18px;
+  grid-column: 3;
 }
+
+/* Premios primero, Pistas segundo */
+.right-panel > div:nth-child(1) { order: 2; }
+.right-panel > div:nth-child(2) { order: 1; }
 
 .right-panel > div {
   min-height: 132px;
@@ -327,7 +392,10 @@ body {
   font-weight: 800;
 }
 
-/* ===================== OPCIONES ===================== */
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
 .choices {
   width: min(1220px, 100%);
   margin: 0 auto;
@@ -376,25 +444,10 @@ body {
     var(--paper);
 }
 
-/* Mantiene las imágenes en la columna central y los dos cuadrados al lado derecho. */
-.story-img {
-  grid-column: 2;
-}
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
-.right-panel {
-  grid-column: 3;
-}
-
-/* Visualmente muestra primero Premios y después Pistas aunque el HTML viejo esté al revés. */
-.right-panel > div:nth-child(1) {
-  order: 2;
-}
-
-.right-panel > div:nth-child(2) {
-  order: 1;
-}
-
-/* ===================== RESPONSIVE ===================== */
 @media (max-width: 980px) {
   .home-content,
   .screen-body {
@@ -415,10 +468,6 @@ body {
     grid-column: auto;
   }
 
-  .right-panel {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .timer-widget {
     top: auto;
     bottom: 18px;
@@ -427,174 +476,76 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 560px) {
   .screen-label,
   .screen-title,
   .final-title,
   .screen-body,
-  .choices,
-  .home-content {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .timer-bar {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .right-panel {
-    grid-template-columns: 1fr;
-  }
-
-  .btn,
-  .home-btn {
-    width: 100%;
-  }
-
-  .timer-widget {
-    width: 82px;
-    height: 82px;
+  .choices {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   #timer-count {
-    font-size: 1.25rem;   
+    font-size: 1.25rem;
   }
 }
 
-
-/* 
-========================================
-ESCENA GENERAL
-========================================
-
-Usamos flexbox para organizar
-horizontalmente:
-
-[ reloj ] [ barra ]
-*/
+/* =========================================================
+   ESCENA COMPUESTA (reloj + barra)
+   ========================================================= */
 
 .escena {
   width: 100%;
   height: 220px;
-
   display: flex;
   align-items: center;
-
   margin-top: 120px;
   margin-bottom: 40px;
 }
 
-/* 
-========================================
-RELOJ LATERAL
-========================================
-
-Zona informativa del sistema temporal.
-*/
-
 .reloj {
   width: 220px;
   height: 100%;
-
   display: flex;
-
-  /* organizamos verticalmente */
   flex-direction: column;
-
-  justify-content: top;
-  align-items: top;
-
+  justify-content: flex-start;
+  align-items: flex-start;
   border-right: 2px solid rgba(255, 255, 255, 0.2);
-
   background: #efe7d5;
 }
 
-/* 
-========================================
-CONTADOR NUMÉRICO
-========================================
-
-Número grande del temporizador.
-*/
-
 .contador {
   color: white;
-
   font-size: 6rem;
   font-weight: bold;
-
   line-height: 1;
-
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
-/* 
-========================================
-ETIQUETA "SEG"
-========================================
-
-Texto complementario pequeño.
-*/
-
 .label {
   margin-top: 10px;
-
   color: rgba(255, 255, 255, 0.5);
-
   font-size: 1rem;
-
   letter-spacing: 4px;
 }
 
-/* 
-========================================
-CONTENEDOR DE LA BARRA
-========================================
-
-Este espacio define el área donde crecerá
-el relleno horizontal.
-*/
-
 .barra-container {
   position: relative;
-
-  /* ocupa todo el espacio restante */
   flex: 1;
-
   height: 70px;
-
   border-top: 4px solid white;
   border-bottom: 4px solid white;
-
-  background:  #efe7d5;
-
+  background: #efe7d5;
   overflow: hidden;
 }
 
-/* 
-========================================
-RELLENO ANIMADO
-========================================
-
-La barra comienza vacía.
-
-Luego JavaScript irá aumentando
-su ancho progresivamente.
-*/
-
 .relleno {
   position: absolute;
-
   left: 0;
   top: 0;
-
   width: 0%;
   height: 100%;
-
-  /* gradiente cromático */
   background: linear-gradient(to right, green 0%, blue 50%, red 100%);
-
-  /* suaviza la animación */
   transition: width 1s linear;
 }

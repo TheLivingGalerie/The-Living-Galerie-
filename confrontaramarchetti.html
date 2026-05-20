@@ -1,68 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Living Galerie</title>
-<link rel="stylesheet" href="style.css">
- <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Living Galerie - Confrontar a Marchetti</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="escena">
-      <div class="reloj">
-
-        <div class="contador" id="contador">60</div>
-
-        <div class="label">SEG</div>
-      </div>
-      <div class="barra-container">
-
-        <div class="relleno" id="relleno"></div>
-      </div>
+ 
+  <div class="escena">
+    <div class="reloj">
+      <div class="contador" id="contador">60</div>
+      <div class="label">SEG</div>
     </div>
-
-    <script src="script.js"></script>
-
-<div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
-  <span class="timer-kicker">Tiempo</span>
-  <span id="timer-count">02:00</span>
-</div>
-<!-- ═══════════════════════════════════════════════════ -->
-<!--  CONFRONTAR A MARCHETTI                            -->
-<!-- ═══════════════════════════════════════════════════ -->
-<div id="confrontar-marchetti" class="screen story-screen">
-  <div class="screen-top-bar"></div>
-  <div class="screen-label">Confrontar a Marchetti</div>
-  <div class="screen-title">Confrontar a Marchetti</div>
-  <div class="timer-bar"></div>
-  <div class="timer-label">Temporizador</div>
-  <div class="screen-body">
-    <div class="story-text">
-      <p>Marchetti no intenta huir cuando pronuncias su nombre. Se queda quieto, con una mano apoyada en el marco de una obra que no tiene título.</p>
-      <p>Le muestras el sello del sobre, las horas cortadas de las cámaras y la firma que aparece una y otra vez en los documentos falsos. Todo apunta hacia él con una precisión demasiado perfecta.</p>
-      <p><strong>"Eso es lo que Jaime quiere que veas"</strong>, responde. Su voz no tiembla por culpa, sino por cansancio.</p>
-      <p>Si lo acusas ahora, tendrás un sospechoso. Pero también podrías estar cerrando la única puerta que conduce al verdadero dueño de The Living Galerie.</p>
-      <p>La decisión pesa más que cualquier cuadro de la sala.</p>
-    </div>
-    <div class="story-img">
-      <img src="images/ENFRENTA MARCHETTI JPG.png" alt="Marchetti bajo sospecha" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
-    </div>
-    <div class="right-panel">
-      <div>
-        <div class="panel-label">Pistas</div>
-        <div class="panel-box"><div class="panel-count">2</div></div>
-      </div>
-      <div>
-        <div class="panel-label">Premios</div>
-        <div class="panel-box"><div class="panel-count">0</div></div>
-      </div>
+    <div class="barra-container">
+      <div class="relleno" id="relleno"></div>
     </div>
   </div>
-  <div class="choices">
-    <a class="btn secondary" href="#final-error-fatal">Retroceder: aún no es suficiente para una condena</a>
-    <a class="btn" href="#final-justicia">Acusación formal: llamar al equipo de respaldo</a>
+ 
+  <div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
+    <span class="timer-kicker">Tiempo</span>
+    <span id="timer-count">01:00</span>
   </div>
-</div>
+ 
+  <div class="story-progress">
+    <div class="story-progress-fill" id="story-progress-fill"></div>
+  </div>
+  <div id="confrontar-marchetti" class="screen story-screen">
+    <div class="screen-top-bar"></div>
+    <div class="screen-label">Confrontar a Marchetti</div>
+    <div class="screen-title">Confrontar a Marchetti</div>
+    <div class="timer-bar"></div>
+    <div class="timer-label">Temporizador</div>
+    
+    <div class="screen-body">
+      <div class="story-text">
+        <p>Marchetti no intenta huir cuando pronuncias su nombre. Se queda quieto, con una mano apoyada en el marco de una obra que no tiene título.</p>
+        <p>Le muestras el sello del sobre, las horas cortadas de las cámaras y la firma que aparece una y otra vez en los documentos falsos. Todo apunta hacia él con una precisión demasiado perfecta.</p>
+        <p><strong>"Eso es lo que Jaime quiere que veas"</strong>, responde. Su voz no tiembla por culpa, sino por cansancio.</p>
+        <p>Si lo acusas ahora, tendrás un sospechoso. Pero también podrías estar cerrando la única puerta que conduce al verdadero dueño de The Living Galerie.</p>
+        <p>La decisión pesa más que cualquier cuadro de la sala.</p>
+      </div>
+      
+      <div class="story-img">
+        <img src="images/ENFRENTA MARCHETTI JPG.png" alt="Marchetti bajo sospecha" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+      </div>
+      
+      <div class="right-panel">
+        <div>
+          <div class="panel-label">Pistas</div>
+          <div class="panel-box"><div class="panel-count">2</div></div>
+        </div>
+        <div>
+          <div class="panel-label">Premios</div>
+          <div class="panel-box"><div class="panel-count">0</div></div>
+        </div>
+      </div>
+    </div><div class="choices">
+      <a class="btn secondary" href="#final-error-fatal">Retroceder: aún no es suficiente para una condena</a>
+      <a class="btn" href="#final-justicia">Acusación formal: llamar al equipo de respaldo</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-</html>.
+</html>

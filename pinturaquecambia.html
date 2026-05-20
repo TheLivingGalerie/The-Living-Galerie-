@@ -1,71 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Living Galerie</title>
-<link rel="stylesheet" href="style.css">
- <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Living Galerie - Pintura Oculta</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="escena">
-      <div class="reloj">
-
-        <div class="contador" id="contador">60</div>
-
-        <div class="label">SEG</div>
-      </div>
-      <div class="barra-container">
-
-        <div class="relleno" id="relleno"></div>
-      </div>
+ 
+  <div class="escena">
+    <div class="reloj">
+      <div class="contador" id="contador">60</div>
+      <div class="label">SEG</div>
     </div>
-
-    <script src="script.js"></script>
-
-<div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
-  <span class="timer-kicker">Tiempo</span>
-  <span id="timer-count">02:00</span>
-</div>
-
-<!-- ═══════════════════════════════════════════════════ -->
-<!--  PINTURA QUE CAMBIA CON LA LUZ                     -->
-<!-- ═══════════════════════════════════════════════════ -->
-<div id="pintura" class="screen story-screen">
-  <div class="screen-top-bar"></div>
-  <div class="screen-label">Pista Oculta</div>
-  <div class="screen-title">Pintura que cambia con la luz</div>
-  <div class="timer-bar"></div>
-  <div class="timer-label">Temporizador</div>
-  <div class="screen-body">
-    <div class="story-text">
-      <p>Sin ficha técnica. Sin firma visible. Sin procedencia declarada.</p>
-      <p>A primera vista es un paisaje sobrio. Niebla, árboles, una figura de espaldas. Pero cuando la luz del corredor la roza desde cierto ángulo —unos cuarenta y cinco grados, justo antes de que el foco parpadee— aparece algo debajo de la pintura superficial.</p>
-      <p>Números. Una secuencia. Y al fondo de la composición, apenas perceptible, una silueta que no es un árbol.</p>
-      <p><strong>Es una puerta.</strong></p>
-      <p>Alguien pintó encima de una obra anterior para ocultar información dentro de otra. Arte como escondite. Arte como mensaje.</p>
-      <p>En el extremo inferior derecho, con luz ultravioleta, se lee: <em>"The Living Galerie no exhibe arte. Lo guarda."</em></p>
-    </div>
-    <div class="story-img">
-      <img src="images/PINTURA LUZ JPG.png" alt="Pintura iluminada" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
-    </div>
-    <div class="right-panel">
-      <div>
-        <div class="panel-label">Pistas</div>
-        <div class="panel-box"><div class="panel-count">3</div></div>
-      </div>
-      <div>
-        <div class="panel-label">Premios</div>
-        <div class="panel-box"><div class="panel-count">0</div></div>
-      </div>
+    <div class="barra-container">
+      <div class="relleno" id="relleno"></div>
     </div>
   </div>
-  <div class="choices">
-    <a class="btn" href="confrontarajaime.html">Confrontar a Jaime</a>
-    <a class="btn" href="saladeseguridad.html">Ir a la sala de seguridad</a>
-    <a class="btn" href="encargadodelagaleria.html">Ir con el encargado de la galería</a>
+ 
+  <div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
+    <span class="timer-kicker">Tiempo</span>
+    <span id="timer-count">01:00</span>
   </div>
-</div>
-</body>
-</html>.
+ 
+  <div class="story-progress">
+    <div class="story-progress-fill" id="story-progress-fill"></div>
+  </div>
+  <div id="pintura" class="screen story-screen">
+    <div class="screen-top-bar"></div>
+    <div class="screen-label">Pista Oculta</div>
+    <div class="screen-title">Pintura que cambia con la luz</div>
+    <div class="timer-bar"></div>
+    <div class="timer-label">Temporizador</div>
+    
+    <div class="screen-body">
+      <div class="story-text">
+        <p>Sin ficha técnica. Sin firma visible. Sin procedencia declarada.</p>
+        <p>A primera vista es un paisaje sobrio. Niebla, árboles, una figura de espaldas. Pero cuando la luz del corredor la roza desde cierto ángulo —unos cuarenta y cinco grados, justo antes de que el foco parpadee— aparece algo debajo de la pintura superficial.</p>
+        <p>Números. Una secuencia. Y al fondo de la composición, apenas perceptible, una silueta que no es un árbol.</p>
+        <p><strong>Es una puerta.</strong></p>
+        <p>Alguien pintó encima de una obra anterior para ocultar información dentro de otra. Arte como escondite. Arte como mensaje.</p>
+        <p>En el extremo inferior derecho, con luz ultravioleta, se lee: <em>"The Living Galerie no exhibe arte. Lo guarda."</em></p>
+      </div>
+      
+      <div class="story-img">
+        <img src="images/PINTURA LUZ JPG.png" alt="Pintura iluminada" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+      </div>
+      
+      <div class="right"></div>

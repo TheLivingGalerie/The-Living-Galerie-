@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Living Galerie</title>
-<link rel="stylesheet" href="style.css">
- <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Living Galerie - Confrontar a Jaime</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="escena">
-      <div class="reloj">
-
-        <div class="contador" id="contador">60</div>
-
-        <div class="label">SEG</div>
-      </div>
-      <div class="barra-container">
-
-        <div class="relleno" id="relleno"></div>
-      </div>
+ 
+  <div class="escena">
+    <div class="reloj">
+      <div class="contador" id="contador">60</div>
+      <div class="label">SEG</div>
     </div>
-
-    <script src="script.js"></script>
-
-<div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
-  <span class="timer-kicker">Tiempo</span>
-  <span id="timer-count">02:00</span>
-</div>
-<!-- ═══════════════════════════════════════════════════ -->
-<!--  CONFRONTAR A JAIME                                -->
-<!-- ═══════════════════════════════════════════════════ -->
-<div id="confrontar-jaime" class="screen story-screen">
-  <div class="screen-top-bar"></div>
-  <div class="screen-label">Confrontar a Jaime Rodríguez</div>
-  <div class="screen-title">Confrontar a Jaime Rodríguez</div>
-  <div class="timer-bar"></div>
-  <div class="timer-label">Temporizador</div>
-  <div class="screen-body">
-    <div class="story-text">
-      <p>Jaime Andrés ocupa el espacio y se siente gran tensión. Alto. Frío. Ojos que calculan antes de que el cerebro termine de pensar.</p>
-      <p>Lo encuentras en el corredor central, frente a una escultura que reconoces de inmediato: fue robada de la Iglesia de Monserrate hace dieciséis meses.</p>
-      <p><strong>"Detective"</strong>, dice sin voltearse. <strong>"Llevas demasiado tiempo aquí para ser un simple visitante."</strong></p>
-      <p>No retrocedes. Le presentas lo que sabes: los registros de la tarjeta de acceso, los metadatos borrados, los documentos de Madame Pauliña escritos con su propia letra. Por primera vez, algo cambia en su expresión. No miedo. Algo más difícil de nombrar.</p>
-      <p>Admiración.</p>
-      <p><strong>"Bien hecho"</strong>, dice lentamente. Y entonces comete el único error de su vida: subestima cuánto tiempo te queda.</p>
-    </div>
-    <div class="story-img">
-      <a href="https://jaimerodriguezgomez.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaARdygJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaeqnGpDF0xV2aGvN_LbeaFm4bv8nMzV4wdK4VlrgonRMbzZusRsBS4GKJaZBw_aem_ElKSN2Y_Mgl006NdL849KQ" target="_blank">
-        <img src="images/confrontar JAIME JPG.jpeg" alt="Jaime frente a la escultura" style="width:100%;height:100%;object-fit:cover;border-radius:8px;cursor:pointer;">
-      </a>
-    </div>
-    <div class="right-panel">
-      <div>
-        <div class="panel-label">Pistas</div>
-        <div class="panel-box"><div class="panel-count">3</div></div>
-      </div>
-      <div>
-        <div class="panel-label">Premios</div>
-        <div class="panel-box"><div class="panel-count">0</div></div>
-      </div>
+    <div class="barra-container">
+      <div class="relleno" id="relleno"></div>
     </div>
   </div>
-  <div class="choices">
-    <a class="btn secondary" href="final2.html">Retroceder: aún no es suficiente para una condena</a>
-    <a class="btn" href="final3.html">Acusación formal: llamar al equipo de respaldo</a>
+ 
+  <div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
+    <span class="timer-kicker">Tiempo</span>
+    <span id="timer-count">01:00</span>
   </div>
-</div>
+ 
+  <div class="story-progress">
+    <div class="story-progress-fill" id="story-progress-fill"></div>
+  </div>
+  <div id="confrontar-jaime" class="screen story-screen">
+    <div class="screen-top-bar"></div>
+    <div class="screen-label">Confrontar a Jaime Rodríguez</div>
+    <div class="screen-title">Confrontar a Jaime Rodríguez</div>
+    <div class="timer-bar"></div>
+    <div class="timer-label">Temporizador</div>
+    
+    <div class="screen-body">
+      <div class="story-text">
+        <p>Jaime Andrés ocupa el espacio y se siente gran tensión. Alto. Frío. Ojos que calculan antes de que el cerebro termine de pensar.</p>
+        <p>Lo encuentras en el corredor central, frente a una escultura que reconoces de inmediato: fue robada de la Iglesia de Monserrate hace dieciséis meses.</p>
+        <p><strong>"Detective"</strong>, dice sin voltearse. <strong>"Llevas demasiado tiempo aquí para ser un simple visitante."</strong></p>
+        <p>No retrocedes. Le presentas lo que sabes: los registros de la tarjeta de acceso, los metadatos borrados, los documentos de Madame Pauliña escritos con su propia letra. Por primera vez, algo cambia en su expresión. No miedo. Algo más difícil de nombrar.</p>
+        <p>Admiración.</p>
+        <p><strong>"Bien hecho"</strong>, dice lentamente. Y entonces comete el único error de su vida: subestima cuánto tiempo te queda.</p>
+      </div>
+      
+      <div class="story-img">
+        <a href="https://jaimerodriguezgomez.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaARdygJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaeqnGpDF0xV2aGvN_LbeaFm4bv8nMzV4wdK4VlrgonRMbzZusRsBS4GKJaZBw_aem_ElKSN2Y_Mgl006NdL849KQ" target="_blank">
+          <img src="images/confrontar JAIME JPG.jpeg" alt="Jaime frente a la escultura" style="width:100%;height:100%;object-fit:cover;border-radius:8px;cursor:pointer;">
+        </a>
+      </div>
+      
+      <div class="right-panel">
+        <div>
+          <div class="panel-label">Pistas</div>
+          <div class="panel-box"><div class="panel-count">3</div></div>
+        </div>
+        <div>
+          <div class="panel-label">Premios</div>
+          <div class="panel-box"><div class="panel-count">0</div></div>
+        </div>
+      </div>
+    </div><div class="choices">
+      <a class="btn secondary" href="final2.html">Retroceder: aún no es suficiente para una condena</a>
+      <a class="btn" href="final3.html">Acusación formal: llamar al equipo de respaldo</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

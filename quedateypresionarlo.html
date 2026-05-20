@@ -1,70 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Living Galerie</title>
-<link rel="stylesheet" href="style.css">
- <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Living Galerie - Quedarte y Presionarlo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="escena">
-      <div class="reloj">
-
-        <div class="contador" id="contador">60</div>
-
-        <div class="label">SEG</div>
-      </div>
-      <div class="barra-container">
-
-        <div class="relleno" id="relleno"></div>
-      </div>
+ 
+  <div class="escena">
+    <div class="reloj">
+      <div class="contador" id="contador">60</div>
+      <div class="label">SEG</div>
     </div>
-
-    <script src="script.js"></script>
-
-<div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
-  <span class="timer-kicker">Tiempo</span>
-  <span id="timer-count">02:00</span>
-</div>
-
-<!-- ═══════════════════════════════════════════════════ -->
-<!--  QUEDARTE Y PRESIONARLO                            -->
-<!-- ═══════════════════════════════════════════════════ -->
-<div id="quedarte-presionar" class="screen story-screen">
-  <div class="screen-top-bar"></div>
-  <div class="screen-label">Quedarte y Presionarlo</div>
-  <div class="screen-title">Quedarte y Presionarlo</div>
-  <div class="timer-bar"></div>
-  <div class="timer-label">Temporizador</div>
-  <div class="screen-body">
-    <div class="story-text">
-      <p>Encuentras a Marchetti en el pasillo principal, mirando una de las obras con expresión que no es admiración sino agotamiento. Cuando lo confrontas con el sello, algo en él se quiebra. No de golpe. Como el cristal fino: primero una grieta, luego el colapso silencioso.</p>
-      <p><strong>"No soy lo que crees"</strong>, dice en voz baja. <strong>"Ese sello… él lo puso ahí. Voss. Para que si alguien llegaba preguntando, encontrara mi nombre primero."</strong></p>
-      <p>Te lo cuenta todo en susurros tensos: lleva tres años siendo chantajeado. Voss descubrió algo de su pasado —no te dice qué— y lo usa como palanca. Marchetti sabe de los robos. Los ha presenciado en silencio, paralizado, sin poder hacer nada.</p>
-      <p><strong>"Madame Elara nunca ha existido"</strong>, dice finalmente. <strong>"Voss la inventó. Voss es esta galería."</strong></p>
-      <p>Sus ojos te miran con algo parecido al alivio. Como si confesar fuera lo único que le quedara. Y tú debes decidir qué hacer con eso.</p>
-    </div>
-    <div class="story-img">
-      <img src="images/QUEDARTE JPG.png" alt="Sobre sellado" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
-    </div>
-    <div class="right-panel">
-      <div>
-        <div class="panel-label">Pistas</div>
-        <div class="panel-box"><div class="panel-count">1</div></div>
-      </div>
-      <div>
-        <div class="panel-label">Premios</div>
-        <div class="panel-box"><div class="panel-count">0</div></div>
-      </div>
+    <div class="barra-container">
+      <div class="relleno" id="relleno"></div>
     </div>
   </div>
-  <div class="choices">
-    <a class="btn" href="confrontarajaime.html">Creerle y dirigirse contra Jaime</a>
-    <a class="btn" href="confrontaramarchetti.html">Acusar formalmente a Marchetti</a>
-    <a class="btn secondary" href="final1.html">Retirarte sin acusar a nadie</a>
+ 
+  <div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
+    <span class="timer-kicker">Tiempo</span>
+    <span id="timer-count">01:00</span>
   </div>
-</div>
+ 
+  <div class="story-progress">
+    <div class="story-progress-fill" id="story-progress-fill"></div>
+  </div>
+  <div id="quedarte-presionar" class="screen story-screen">
+    <div class="screen-top-bar"></div>
+    <div class="screen-label">Quedarte y Presionarlo</div>
+    <div class="screen-title">Quedarte y Presionarlo</div>
+    <div class="timer-bar"></div>
+    <div class="timer-label">Temporizador</div>
+    
+    <div class="screen-body">
+      <div class="story-text">
+        <p>Encuentras a Marchetti en el pasillo principal, mirando una de las obras con expresión que no es admiración sino agotamiento. Cuando lo confrontas con el sello, algo en él se quiebra. No de golpe. Como el cristal fino: primero una grieta, luego el colapso silencioso.</p>
+        <p><strong>"No soy lo que crees"</strong>, dice en voz baja. <strong>"Ese sello… él lo puso ahí. Voss. Para que si alguien llegaba preguntando, encontrara mi nombre primero."</strong></p>
+        <p>Te lo cuenta todo en susurros tensos: lleva tres años siendo chantajeado. Voss descubrió algo de su pasado —no te dice qué— y lo usa como palanca. Marchetti sabe de los robos. Los ha presenciado en silencio, paralizado, sin poder hacer nada.</p>
+        <p><strong>"Madame Elara nunca ha existido"</strong>, dice finalmente. <strong>"Voss la inventó. Voss es esta galería."</strong></p>
+        <p>Sus ojos te miran con algo parecido al alivio. Como si confesar fuera lo único que le quedara. Y tú debes decidir qué hacer con eso.</p>
+      </div>
+      
+      <div class="story-img">
+        <img src="images/QUEDARTE JPG.png" alt="Sobre sellado" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+      </div>
+      
+      <div class="right-panel">
+        <div>
+          <div class="panel-label">Pistas</div>
+          <div class="panel-box"><div class="panel-count">1</div></div>
+        </div>
+        <div>
+          <div class="panel-label">Premios</div>
+          <div class="panel-box"><div class="panel-count">0</div></div>
+        </div>
+      </div>
+    </div><div class="choices">
+      <a class="btn" href="confrontarajaime.html">Creerle y dirigirse contra Jaime</a>
+      <a class="btn" href="confrontaramarchetti.html">Acusar formalmente a Marchetti</a>
+      <a class="btn secondary" href="final1.html">Retirarte sin acusar a nadie</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-</html>.
+</html>

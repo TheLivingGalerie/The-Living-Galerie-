@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Living Galerie</title>
-<link rel="stylesheet" href="style.css">
- <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Living Galerie - Sala de Seguridad</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="escena">
-      <div class="reloj">
-
-        <div class="contador" id="contador">60</div>
-
-        <div class="label">SEG</div>
-      </div>
-      <div class="barra-container">
-
-        <div class="relleno" id="relleno"></div>
-      </div>
+ 
+  <div class="escena">
+    <div class="reloj">
+      <div class="contador" id="contador">60</div>
+      <div class="label">SEG</div>
     </div>
-
-    <script src="script.js"></script>
-
-<div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
-  <span class="timer-kicker">Tiempo</span>
-  <span id="timer-count">02:00</span>
-</div>
-<!-- ═══════════════════════════════════════════════════ -->
-<!--  SALA DE SEGURIDAD                                  -->
-<!-- ═══════════════════════════════════════════════════ -->
-<div id="seguridad" class="screen story-screen">
+    <div class="barra-container">
+      <div class="relleno" id="relleno"></div>
+    </div>
+  </div>
+ 
+  <div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
+    <span class="timer-kicker">Tiempo</span>
+    <span id="timer-count">01:00</span>
+  </div>
+ 
+  <div class="story-progress">
+    <div class="story-progress-fill" id="story-progress-fill"></div>
+  </div>
+  <div id="seguridad" class="screen story-screen">
   <div class="screen-top-bar"></div>
   <div class="screen-label">Sala de Seguridad</div>
   <div class="screen-title">Sala de Seguridad</div>
   <div class="timer-bar"></div>
   <div class="timer-label">Temporizador</div>
+  
   <div class="screen-body">
     <div class="story-text">
       <p>La sala huele a café quemado y papel húmedo. Hay dos guardias pero ninguno está mirando las pantallas.</p>
@@ -46,9 +42,11 @@
       <p>El código de acceso de Madame Pauliña.</p>
       <p>Pero Madame Pauliña lleva seis meses sin aparecer en la galería. Alguien usó sus credenciales. Y alguien sabía exactamente cuándo las cámaras parpadeaban.</p>
     </div>
+    
     <div class="story-img">
       <img src="images/SALA DE SEG JP.png" alt="Sala de seguridad" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
     </div>
+    
     <div class="right-panel">
       <div>
         <div class="panel-label">Pistas</div>
@@ -59,12 +57,13 @@
         <div class="panel-box"><div class="panel-count">0</div></div>
       </div>
     </div>
-  </div>
-  <div class="choices">
+  </div><div class="choices">
     <a class="btn" href="confrontarajaime.html">Confrontar a Jaime</a>
     <a class="btn" href="archivoovulto.html">Investigar el archivo oculto</a>
     <a class="btn" href="catalogo.html">Revisar catálogo de subasta</a>
   </div>
 </div>
+
+  <script src="script.js"></script>
 </body>
-</html>.
+</html>

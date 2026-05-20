@@ -1,70 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Living Galerie</title>
-<link rel="stylesheet" href="style.css">
- <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Living Galerie - Encargado de la Galería</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="escena">
-      <div class="reloj">
 
-        <div class="contador" id="contador">60</div>
-
-        <div class="label">SEG</div>
-      </div>
-      <div class="barra-container">
-
-        <div class="relleno" id="relleno"></div>
-      </div>
+  <div class="escena">
+    <div class="reloj">
+      <div class="contador" id="contador">60</div>
+      <div class="label">SEG</div>
     </div>
-
-    <script src="script.js"></script>
-
-<div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
-  <span class="timer-kicker">Tiempo</span>
-  <span id="timer-count">02:00</span>
-</div>
-
-<!-- ═══════════════════════════════════════════════════ -->
-<!--  ENCARGADO DE LA GALERÍA                           -->
-<!-- ═══════════════════════════════════════════════════ -->
-<div id="encargado" class="screen story-screen">
-  <div class="screen-top-bar"></div>
-  <div class="screen-label">Encargado de la Galería</div>
-  <div class="screen-title">El Encargado de la Galería</div>
-  <div class="timer-bar"></div>
-  <div class="timer-label">Temporizador</div>
-  <div class="screen-body">
-    <div class="story-text">
-      <p>La oficina está abierta… No esperabas eso.</p>
-      <p>Adentro, todo está demasiado ordenado. Libros alineados por tamaño, no por tema. Un escritorio limpio, excepto por un catálogo viejo y una copa con agua a medio terminar. El encargado de la galería levanta la vista cuando entras. No solemos tener visitantes a esta hora dice, como si ya supiera que ibas a aparecer. No parece nervioso. Pero tampoco relajado. Más bien… cansado.</p>
-      <p>Le preguntas por las obras. Dice que vienen de colecciones privadas. Evita darte nombres. Mientras habla, notas un sobre en la esquina del escritorio. Está mal cerrado. Como si lo hubieran abierto hace poco.</p>
-      <p>Tiene un sello. Lo reconoces. No sabes de dónde, pero lo has visto antes. El encargado sigue hablando, pero ya no le estás prestando atención.</p>
-      <p><strong>Algo aquí está mal.</strong></p>
-    </div>
-    <div class="story-img">
-      <img src="images/ENCARGADO GALERÍA JPG.png" alt="Oficina del encargado" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
-    </div>
-    <div class="right-panel">
-      <div>
-        <div class="panel-label">Pistas</div>
-        <div class="panel-box"><div class="panel-count">0</div></div>
-      </div>
-      <div>
-        <div class="panel-label">Premios</div>
-        <div class="panel-box"><div class="panel-count">0</div></div>
-      </div>
+    <div class="barra-container">
+      <div class="relleno" id="relleno"></div>
     </div>
   </div>
-  <div class="choices">
-    <a class="btn" href="saladeseguridad.html">Ir a seguridad</a>
-    <a class="btn" href="nuevazona.html">Buscar en otra zona</a>
-    <a class="btn" href="quedateypresionarlo.html">Quedarte y presionarlo un poco más</a>
+ 
+  <div id="timer-widget" class="timer-widget" aria-live="polite" hidden>
+    <span class="timer-kicker">Tiempo</span>
+    <span id="timer-count">01:00</span>
   </div>
-</div>
+ 
+  <div class="story-progress">
+    <div class="story-progress-fill" id="story-progress-fill"></div>
+  </div>
+  <div id="encargado" class="screen story-screen">
+    <div class="screen-top-bar"></div>
+    <div class="screen-label">Encargado de la Galería</div>
+    <div class="screen-title">El Encargado de la Galería</div>
+    <div class="timer-bar"></div>
+    <div class="timer-label">Temporizador</div>
+    
+    <div class="screen-body">
+      <div class="story-text">
+        <p>La oficina está abierta… No esperabas eso.</p>
+        <p>Adentro, todo está demasiado ordenado. Libros alineados por tamaño, no por tema. Un escritorio limpio, excepto por un catálogo viejo y una copa con agua a medio terminar. El encargado de la galería levanta la vista cuando entras. No solemos tener visitantes a esta hora dice, como si ya supiera que ibas a aparecer. No parece nervioso. Pero tampoco relajado. Más bien… cansado.</p>
+        <p>Le preguntas por las obras. Dice que vienen de colecciones privadas. Evita darte nombres. Mientras habla, notas un sobre en la esquina del escritorio. Está mal cerrado. Como si lo hubieran abierto hace poco.</p>
+        <p>Tiene un sello. Lo reconoces. No sabes de dónde, pero lo has visto antes. El encargado sigue hablando, pero ya no le estás prestando atención.</p>
+        <p><strong>Algo aquí está mal.</strong></p>
+      </div>
+      
+      <div class="story-img">
+        <img src="images/ENCARGADO GALERÍA JPG.png" alt="Oficina del encargado" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+      </div>
+      
+      <div class="right-panel">
+        <div>
+          <div class="panel-label">Pistas</div>
+          <div class="panel-box"><div class="panel-count">0</div></div>
+        </div>
+        <div>
+          <div class="panel-label">Premios</div>
+          <div class="panel-box"><div class="panel-count">0</div></div>
+        </div>
+      </div>
+    </div><div class="choices">
+      <a class="btn" href="saladeseguridad.html">Ir a seguridad</a>
+      <a class="btn" href="nuevazona.html">Buscar en otra zona</a>
+      <a class="btn" href="quedateypresionarlo.html">Quedarte y presionarlo un poco más</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-</html>.
+</html>

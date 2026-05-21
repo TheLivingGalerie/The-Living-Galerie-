@@ -29,14 +29,14 @@ function isFinalScreen() {
 
 // ─── FORMATEAR TIEMPO (segundos → MM:SS) ──────────────────
 function formatTime(totalSeconds) {
-  const minutes = Math.floor(totalSeconds / 300).toString().padStart(2, "0");
-  const seconds = (totalSeconds % 300).toString().padStart(2, "0");
+  const minutes = Math.floor(totalSeconds / 60).toString().padStart(2, "0");
+  const seconds = (totalSeconds % 60).toString().padStart(2, "0");
   return `${minutes}:${seconds}`;
 }
 
 // ─── ACTUALIZAR TODOS LOS ELEMENTOS VISUALES ──────────────
 function updateVisuals(secs) {
-  const progreso = ((STORY_TIME_SECONDS - secs) / STORY_TIME_SECONDS) * 100;
+  const progreso = ((STORY_TIME_SECONDS - secs) / STORY_TIME_SECONDS) * 60;
 
   if (timerCount)   timerCount.textContent = formatTime(secs);
   if (contador)     contador.textContent   = secs;
@@ -84,7 +84,7 @@ function startTimer() {
     if (secondsLeft <= 0) {
       stopTimer();
       sessionStorage.removeItem("timerSeconds");
-      window.location.href = "fin-sin-tiempo.html";
+      window.location.href = "finsintiempo.html";
     }
   }, 1000);
 }

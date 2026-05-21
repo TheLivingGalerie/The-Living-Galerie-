@@ -3,7 +3,7 @@
 // =========================================================
 
 // ─── CONFIGURACIÓN ────────────────────────────────────────
-const STORY_TIME_SECONDS = 60;
+const STORY_TIME_SECONDS = 300;
 const FINAL_SCREENS = [
   "fin-sin-tiempo",
   "final-sombras",
@@ -29,8 +29,8 @@ function isFinalScreen() {
 
 // ─── FORMATEAR TIEMPO (segundos → MM:SS) ──────────────────
 function formatTime(totalSeconds) {
-  const minutes = Math.floor(totalSeconds / 60).toString().padStart(2, "0");
-  const seconds = (totalSeconds % 60).toString().padStart(2, "0");
+  const minutes = Math.floor(totalSeconds / 300).toString().padStart(2, "0");
+  const seconds = (totalSeconds % 300).toString().padStart(2, "0");
   return `${minutes}:${seconds}`;
 }
 

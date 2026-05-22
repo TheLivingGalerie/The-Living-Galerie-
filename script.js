@@ -4,6 +4,7 @@
 
 const SLIDE_TIME_SECONDS = 90;
 const TOTAL_CLUES = 3;
+const TOTAL_AWARDS = 4;
 const FINAL_SCREENS = [
   "finsintiempo.html",
   "final1.html",
@@ -30,6 +31,29 @@ const CLUES_BY_PAGE = {
   "final3.html": 3,
   "finsintiempo.html": 0
 };
+
+const AWARDS = [
+  {
+    id: "primer-rastro",
+    name: "Primer rastro",
+    condition: ({ foundClues }) => foundClues >= 1
+  },
+  {
+    id: "archivo-vivo",
+    name: "Archivo vivo",
+    condition: ({ page, foundClues }) => foundClues >= 2 || ["archivoovulto.html", "catalogo.html"].includes(page)
+  },
+  {
+    id: "luz-ultravioleta",
+    name: "Luz UV",
+    condition: ({ foundClues }) => foundClues >= 3
+  },
+  {
+    id: "caso-cerrado",
+    name: "Caso cerrado",
+    condition: ({ page }) => page === "final3.html"
+  }
+];
 
 const JAIME_URL = "https://jaimerodriguezgomez.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaARdygJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaeqnGpDF0xV2aGvN_LbeaFm4bv8nMzV4wdK4VlrgonRMbzZusRsBS4GKJaZBw_aem_ElKSN2Y_Mgl006NdL849KQ";
 
@@ -128,6 +152,7 @@ function initializeTimer() {
 function resetGameOnHome() {
   if (isHomePage()) {
     sessionStorage.removeItem("foundClues");
+    sessionStorage.removeItem("earnedAwards");
   }
 }
 
@@ -176,6 +201,60 @@ function updateClueTracker() {
           : "Sigue buscando: todavia hay piezas sueltas.";
       }
     }
+  });
+}
+
+function savedAwards() {
+  try {
+    return JSON.parse(sessionStorage.getItem("earnedAwards") || "[]");
+  } catch (error) {
+    return [];
+  }
+}
+
+function updateAwardTracker() {
+  const page = currentPage();
+  const foundClues = parseInt(sessionStorage.getItem("foundClues") || pageClues(), 10);
+  const earned = new Set(savedAwards());
+
+  AWARDS.forEach((award) => {
+    if (award.condition({ page, foundClues })) earned.add(award.id);
+  });
+
+  if (!isHomePage()) {
+    sessionStorage.setItem("earnedAwards", JSON.stringify(Array.from(earned)));
+  }
+
+  const earnedAwards = AWARDS.filter((award) => earned.has(award.id));
+  const nextAward = AWARDS.find((award) => !earned.has(award.id));
+
+  document.querySelectorAll(".right-panel").forEach((panel) => {
+    const boxes = Array.from(panel.children);
+    const awardBox = boxes.find((box) => {
+      const label = box.querySelector(".panel-label");
+      return label && label.textContent.trim().toLowerCase().includes("premios");
+    });
+
+    if (!awardBox) return;
+
+    const count = awardBox.querySelector(".panel-count");
+    if (count) count.textContent = `${earnedAwards.length}/${TOTAL_AWARDS}`;
+
+    let meter = awardBox.querySelector(".award-meter");
+    if (!meter) {
+      meter = document.createElement("div");
+      meter.className = "award-meter";
+      awardBox.appendChild(meter);
+    }
+
+    const badges = earnedAwards.length
+      ? earnedAwards.map((award) => `<span>${award.name}</span>`).join("")
+      : "<span class=\"is-locked\">Sin premios aun</span>";
+
+    meter.innerHTML = `
+      <div class="award-badges">${badges}</div>
+      <p>${nextAward ? `Proximo premio: ${nextAward.name}.` : "Todos los premios desbloqueados."}</p>
+    `;
   });
 }
 
@@ -229,6 +308,20 @@ function initializeImagePopups() {
   });
 }
 
+function initializeLightPainting() {
+  if (currentPage() !== "pinturaquecambia.html") return;
+
+  const imageWrap = document.querySelector(".story-img");
+  if (!imageWrap || imageWrap.classList.contains("light-painting")) return;
+
+  imageWrap.classList.add("light-painting");
+
+  const cta = document.createElement("div");
+  cta.className = "light-cta";
+  cta.textContent = "Pasa el cursor por la pintura para revelar la luz oculta";
+  imageWrap.appendChild(cta);
+}
+
 function initializeJaimeCta() {
   const jaimeImage = document.querySelector('img[src*="JAIME"]');
   if (!jaimeImage) return;
@@ -264,11 +357,42 @@ function initializeDecisionPrompt() {
   screen.insertBefore(prompt, choices);
 }
 
+function initializeVictoryPopup() {
+  if (currentPage() !== "final3.html" || document.querySelector(".victory-modal")) return;
+
+  const modal = document.createElement("div");
+  modal.className = "victory-modal";
+  modal.innerHTML = `
+    <div class="victory-card" role="dialog" aria-modal="true" aria-labelledby="victory-title">
+      <p class="victory-kicker">Caso resuelto</p>
+      <h2 id="victory-title">Ganaste. Eres muy crack.</h2>
+      <p>Reuniste las pistas, leiste las sombras de la galeria y cerraste el caso antes de que Jaime escapara.</p>
+      <button type="button" class="victory-close">Seguir viendo el final</button>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  const close = () => {
+    modal.hidden = true;
+  };
+
+  modal.querySelector(".victory-close").addEventListener("click", close);
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) close();
+  });
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") close();
+  });
+}
+
 window.addEventListener("load", () => {
   resetGameOnHome();
   initializeTimer();
   updateClueTracker();
+  updateAwardTracker();
+  initializeLightPainting();
   initializeJaimeCta();
   initializeDecisionPrompt();
+  initializeVictoryPopup();
   initializeImagePopups();
 });
